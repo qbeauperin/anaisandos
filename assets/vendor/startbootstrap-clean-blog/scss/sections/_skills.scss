@@ -1,0 +1,31 @@
+ul.skills {
+    list-style: none;
+    margin: 60px 0;
+    padding: 0;
+
+    li {
+        display: block;
+        margin: 20px auto;
+        border: solid 1px #dedede;
+
+        h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            background-color: #e8f6fe;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        p {
+            padding: 20px;
+            margin: 0;
+        }
+
+        &:nth-child(1) h3 { background-color: #fff9e9; }
+        &:nth-child(2) h3 { background-color: #e3fff4; }
+        &:nth-child(3) h3 { background-color: #e8f6fe; }
+        &:nth-child(4) h3 { background-color: #f1efff; }
+        &:nth-child(5) h3 { background-color: #fff1f5; }
+    }
+}
