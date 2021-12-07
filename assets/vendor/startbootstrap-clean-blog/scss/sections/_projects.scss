@@ -1,0 +1,40 @@
+ul.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 60px 0;
+    padding: 0;
+
+    li {
+        display: block;
+        margin: 20px 0;
+        width: 100%;
+        @media only screen and (min-width: 768px) {
+            width: calc(50% - 20px);
+        }
+        
+        .image {
+            position: relative;
+            padding-bottom: 56.25%;
+
+            img {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0 0;
+        }
+    }
+}
