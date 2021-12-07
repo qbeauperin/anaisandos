@@ -1,0 +1,42 @@
+---
+layout: page
+title: Contactez moi
+description: Pour étudier ensemble votre projet, n’hésitez pas à me contacter par mail ou téléphone. Au plaisir de vous rencontrer et de partager un bout de chemin ensemble !
+form: true
+---
+
+<form name="sentMessage" id="contactForm" novalidate>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>Nom</label>
+      <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Merci d'entrer votre nom.">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>Adresse Email</label>
+      <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Merci d'entrer votre adresse email.">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>Numero de telephone</label>
+      <input type="tel" class="form-control" placeholder="Numéro de téléphone" id="phone" required data-validation-required-message="Merci d'entrer votre numéro de téléphone.">
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>Message</label>
+      <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Merci d'entrer votre message."></textarea>
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <br>
+  <div id="success"></div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" id="sendMessageButton">Envoyer</button>
+  </div>
+</form>

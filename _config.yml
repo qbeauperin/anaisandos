@@ -1,0 +1,25 @@
+title:              Anaïs Andos
+email:              anais.andos@gmail.com
+description:        Rédactrice indépendante
+author:             Anaïs Andos
+
+# Social Profiles
+twitter_username:   
+github_username:    
+facebook_username:  
+instagram_username:  
+linkedin_username:  anaïs-andos-49104b1bb
+
+google_analytics:   UA-XXXXXXXXX-X
+
+# Build settings
+markdown:           kramdown
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      background: '/img/background.jpg'
