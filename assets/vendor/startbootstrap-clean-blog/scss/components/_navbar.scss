@@ -9,11 +9,11 @@
         font-weight: 800;
         color: $gray-800;
 
-        .logo--light {
-            display: block;
-        }
-        .logo--dark {
-            display: none;
+
+        & > svg {
+            width: 40px;
+            height: 40px;
+            fill: $gray-800;
         }
     }
 
@@ -47,6 +47,10 @@
             &:focus,
             &:hover {
                 color: fade-out($white, .2);
+            }
+
+            & > svg {
+                fill: white;
             }
         }
 
@@ -96,11 +100,8 @@
                     color: $primary;
                 }
 
-                .logo--light {
-                    display: none;
-                }
-                .logo--dark {
-                    display: block;
+                & > svg {
+                    fill: $gray-900;
                 }
             }
 
