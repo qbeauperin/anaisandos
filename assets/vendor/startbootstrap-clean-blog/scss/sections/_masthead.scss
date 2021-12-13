@@ -1,6 +1,4 @@
-// Styling for the masthead
 header.masthead {
-    // TIP: Background images are set within the HTML using inline CSS!
     margin-bottom: 50px;
     background: no-repeat center center;
     background-color: $gray-600;
@@ -21,11 +19,14 @@ header.masthead {
     .page-heading,
     .post-heading,
     .site-heading {
-        padding: 200px 0 150px;
+        padding: 110px 0 60px;
         color: white;
 
         @media only screen and (min-width: 768px) {
-            padding: 200px 0;
+            padding: 130px 0 80px;
+        }
+        @media only screen and (min-width: 992px) {
+            padding: 110px 0 80px;
         }
     }
 
@@ -34,8 +35,13 @@ header.masthead {
         text-align: center;
 
         h1 {
-            font-size: 50px;
+            font-size: 40px;
             margin-top: 0;
+            line-height: 1;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 50px;
+            }
         }
 
         .subheading {
@@ -45,12 +51,6 @@ header.masthead {
             display: block;
             margin: 10px 0 0;
             font-family: $headings-font-family;
-        }
-
-        @media only screen and (min-width: 768px) {
-            h1 {
-                font-size: 80px;
-            }
         }
     }
 
@@ -90,6 +90,27 @@ header.masthead {
 
             .subheading {
                 font-size: 30px;
+            }
+        }
+    }
+}
+
+.home header.masthead {
+    .page-heading,
+    .post-heading,
+    .site-heading {
+        padding: 200px 0 150px;
+
+        @media only screen and (min-width: 768px) {
+            padding: 200px 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 80px;
             }
         }
     }
