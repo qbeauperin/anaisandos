@@ -1,19 +1,19 @@
 ul.services {
     list-style: none;
-    margin: 60px auto;
+    margin: 40px auto;
     padding: 0;
     
     @media only screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 60px -70px;
+        margin: 40px -70px;
     }
     @media only screen and (min-width: 992px) {
-        margin: 60px -150px;
+        margin: 40px -150px;
     }
     @media only screen and (min-width: 1200px) {
-        margin: 60px -200px;
+        margin: 40px -200px;
     }
     
     li {
