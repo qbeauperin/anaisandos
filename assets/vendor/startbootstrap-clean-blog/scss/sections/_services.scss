@@ -20,6 +20,7 @@ ul.services {
         display: block;
         margin: 10px 0;
         border: solid 1px #dedede;
+        padding: 20px;
 
         @media only screen and (min-width: 768px) {
             width: calc(50% - 10px);
@@ -29,26 +30,42 @@ ul.services {
             }
         }
 
+        @media only screen and (min-width: 576px) {
+            padding: 30px;
+        }
+
+        & > svg {
+            display: block;
+            width: 50px;
+            height: auto;
+            
+            @media only screen and (min-width: 576px) {
+                width: 60px;
+            }
+        }
 
         h3 {
             font-size: 1.5rem;
             text-transform: uppercase;
             font-weight: 400;
-            background-color: #e8f6fe;
-            margin: 0;
-            padding: 20px;
+            margin: 30px 0 20px;
         }
         
         p {
-            padding: 20px;
             margin: 0;
         }
 
-        &:nth-child(1) h3 { background-color: #7bdcb5; }
-        &:nth-child(2) h3 { background-color: #ffe292; }
-        &:nth-child(3) h3 { background-color: #e8f6fe; }
-        &:nth-child(4) h3 { background-color: #d8e1e8; }
-        &:nth-child(5) h3 { background-color: #ecd4da; }
+        &:nth-child(1) > svg { fill: #7bdcb5; }
+        &:nth-child(2) > svg { fill: #ffdc7b; }
+        &:nth-child(3) > svg { fill: #a5bad5; }
+        &:nth-child(4) > svg { fill: #ff7447; }
+        &:nth-child(5) > svg { 
+            fill: #fbb9ca;
+            height: 48px;
+            @media only screen and (min-width: 576px) {
+                height: 55px;
+            }
+        }
         // &:nth-child(1) h3 { background-color: #fff9e9; }
         // &:nth-child(2) h3 { background-color: #e3fff4; }
         // &:nth-child(3) h3 { background-color: #e8f6fe; }
