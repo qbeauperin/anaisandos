@@ -11,6 +11,9 @@ facebook_username:
 instagram_username:  
 linkedin_username:  anaïs-andos-49104b1bb
 
+# Formspree config
+formspree_endpoint: https://formspree.io/f/mlezderd
+
 google_analytics:   UA-XXXXXXXXX-X
 
 # Build settings
