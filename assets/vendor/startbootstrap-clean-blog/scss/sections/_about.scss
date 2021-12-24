@@ -1,0 +1,32 @@
+.about {
+    margin: 50px auto;
+    
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px -70px;
+    }
+    @media only screen and (min-width: 992px) {
+        margin: 50px auto;
+    }
+
+    &__image {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: solid 1px #dedede;
+            margin-bottom: 50px;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        @media only screen and (min-width: 768px) {
+            padding-left: 30px;
+        }
+    }
+}
