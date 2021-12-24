@@ -2,6 +2,9 @@
 body {
     font-size: 20px;
     color: $gray-900;
+    @media only screen and (min-width: 1200px) {
+        background: transparent url(/img/coquelicot.gif) bottom right no-repeat;
+    }
 }
 
 p {
