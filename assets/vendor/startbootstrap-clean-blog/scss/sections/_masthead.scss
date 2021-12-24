@@ -39,8 +39,9 @@ header.masthead {
             font-size: 40px;
             margin-top: 0;
             line-height: 1;
-            font-family: $font-family-base;
-            font-weight: 600;
+            // font-family: $font-family-base;
+            font-weight: 200;
+            text-transform: uppercase;
 
             @media only screen and (min-width: 768px) {
                 font-size: 50px;
@@ -106,13 +107,13 @@ header.masthead {
     .site-heading {
         padding: 200px 0 150px;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 992px) {
             padding: 200px 0;
         }
 
         h1 {
-            font-size: 50px;
-            line-height: 1.2;
+            font-size: 45px;
+            line-height: .9;
 
             @media only screen and (min-width: 768px) {
                 font-size: 80px;
