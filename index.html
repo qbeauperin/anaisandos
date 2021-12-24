@@ -36,7 +36,7 @@ layout: page
 
 <div class="about">
     <div class="about__image">
-        <img src="/img/anais.jpg" alt="Anais Andos">
+        <img src="{{'/img/anais.jpg' | relative_url }}" alt="Anais Andos">
     </div>
     <div class="about__content">
         <p class="raw-text">Mon souhait ? Ecrire, écrire et écrire encore pour prendre soin de demain dès aujourd’hui.</p>
@@ -50,5 +50,5 @@ layout: page
 </div>
 
 <div class="cta">
-    <a class="btn btn-primary" href="/projets-et-clients">Explore mes projets</a>
+    <a class="btn btn-primary" href="{{'/projets-et-clients' | relative_url }}">Explore mes projets</a>
 </div>

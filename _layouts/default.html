@@ -4,7 +4,7 @@
 
 {% include head.html %}
 
-<body class="{{ page.url | replace: '/', '' | default: 'home' }}">
+<body class="{{ page.url | replace: '/', '' | default: 'home' }}" style="background-image: url({{ '/img/coquelicot.gif' | prepend: site.baseurl | replace: '//', '/' }})">
 
   {% include navbar.html %}
 
