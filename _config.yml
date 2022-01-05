@@ -14,7 +14,7 @@ linkedin_username:  anaïs-andos-49104b1bb
 # Formspree config
 formspree_endpoint: https://formspree.io/f/mlezderd
 
-google_analytics:   UA-XXXXXXXXX-X
+google_analytics:   G-0EKZ23M3G5
 
 # Build settings
 markdown:           kramdown
