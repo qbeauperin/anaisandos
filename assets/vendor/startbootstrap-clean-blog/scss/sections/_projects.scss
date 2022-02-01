@@ -31,6 +31,11 @@ ul.projects {
             position: relative;
             padding-bottom: 56.25%;
             overflow: hidden;
+
+            @media only screen and (min-width: 576px) {
+                border: solid 1px #dedede;
+                border-bottom: none;
+            }
             
             img {
                 position: absolute;
