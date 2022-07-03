@@ -8,47 +8,15 @@ permalink: /temoignages
 <h1 class="section-heading">Ce que les gens en disent</h1>
 
 <ul class="testimonials">
+    {% for testimonial in site.testimonials %}
     <li>
-        <p class="quote">Nous avons sollicité Anaïs pour la relecture d'un livre de 256 pages avant publication et distribution dans des centaines d'enseignes. C'était un enjeu majeur pour nous et Anaïs a su s'emparer du projet très rapidement, ce qui a été très rassurant. Force de proposition et très professionnelle, nous lui avons fait confiance les yeux fermés. Elle est d'ailleurs allée au-delà du brief initial pour nous suggérer des améliorations de contenu, tout en respectant notre ligne éditoriale. Bref, on ne peut que recommander, ça a été un plaisir de collaborer : Anaïs est sérieuse, rapide, flexible et très solaire.</p>
-        <a href="https://www.twomorrow-project.com/" class="author" target="_blank">
-            <span class="author__name">Léo Primard et Célia Poncelin</span>
-            <span class="author__title">Co-fondateurs - Twomorrow</span>
-        </a>
-    </li><li>
-        <p class="quote">Ce que tu écris ne ressemble à rien d’autre que je connais. C’est fabuleux. On voit les images quand on lit.</p>
-        <a href="https://www.linkedin.com/in/vivianamatteidubois/" class="author" target="_blank">
-            <span class="author__name">Viviana Mattei</span>
-            <span class="author__title">Comédienne</span>
+        <div class="quote">{{- testimonial.content -}}</div>
+        <a href="{{ testimonial.link }}" class="author" target="_blank">
+            <span class="author__name">{{ testimonial.author_title }}</span>
+            <span class="author__title">{{ testimonial.author_title }}</span>
         </a>
     </li>
-    <li>
-        <p class="quote">J’ai eu l’occasion de travailler avec Anaïs à plusieurs reprises, sur des projets variés. J’apprécie son professionnalisme, autant que ses engagements. Son style et son originalité s’expriment autant sur des sujets imposés que sur une carte blanche. J’ai ainsi toujours pu travailler avec elle avec une totale confiance. Au-delà de ses évidents talents d’écriture, j’aime sa vision du monde et la poésie qui se dégage de ses textes.</p>
-        <a href="https://www.fabiengarou-photographie.com/" class="author" target="_blank">
-            <span class="author__name">Fabien Garou</span>
-            <span class="author__title">Photographe</span>
-        </a>
-    </li>
-    <li>
-        <p class="quote">Anaïs, elle a cette capacité à savoir doser ses mots, à verser dans une prose toute douce ; de celle qui vous emporte et vous fait du bien. Une fluidité des phrases qui vous emmène et vous transporte à bon port, sans prétention aucune.</p>
-        <a href="https://www.linkedin.com/in/aur%C3%A9lien-germain-90759b1a2/" class="author" target="_blank">
-            <span class="author__name">Aurélien Germain</span>
-            <span class="author__title">Journaliste</span>
-        </a>
-    </li>
-    <li>
-        <p class="quote">Anaïs est une rédactrice web de talent, avec une fibre journalistique. À l'aise en clientèle, elle sait obtenir avec tact l'information dont elle aura besoin pour écrire. Sa rédaction est précise, avec le souci permanent de trouver le juste équilibre entre les besoins en référencement et la qualité de l'expérience lecteur. Je recommande vivement le travail d'Anaïs !</p>
-        <a href="https://www.linkedin.com/in/gildaslemoigne/" class="author" target="_blank">
-            <span class="author__name">Gildas Le Moigne</span>
-            <span class="author__title">Dirigeant - Agence éditorial Paragraphe</span>
-        </a>
-    </li>
-    <li>
-        <p class="quote">J’apprécie vraiment beaucoup la qualité de la langue. Elle ne concède rien à la modernité, et elle sent bon le plaisir d’écrire.</p>
-        <a href="https://www.cepravoi.fr/" class="author" target="_blank">
-            <span class="author__name">Michel de Lannoy</span>
-            <span class="author__title">Vice-président - CEPRAVOI</span>
-        </a>
-    </li>
+    {% endfor %}
 </ul>
 
 <div class="cta">

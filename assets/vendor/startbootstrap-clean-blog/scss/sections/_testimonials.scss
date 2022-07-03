@@ -16,7 +16,7 @@
             padding: 25px 30px 30px;
         }
 
-        p {
+        .quote {
             margin: 0;
             font-style: italic;
 
@@ -50,9 +50,9 @@
             }
         }
 
-        &:nth-child(4n+1) p:before { color: #7bdcb5; }
-        &:nth-child(4n+2) p:before { color: #ffe292; }
-        &:nth-child(4n+3) p:before { color: #d8e1e8; }
-        &:nth-child(4n) p:before { color: #ecd4da; }
+        &:nth-child(4n+1) .quote:before { color: #7bdcb5; }
+        &:nth-child(4n+2) .quote:before { color: #ffe292; }
+        &:nth-child(4n+3) .quote:before { color: #d8e1e8; }
+        &:nth-child(4n) .quote:before { color: #ecd4da; }
     }
 }

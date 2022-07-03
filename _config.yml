@@ -30,3 +30,4 @@ defaults:
 
 collections:
   - projects
+  - testimonials

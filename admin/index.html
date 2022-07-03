@@ -7,6 +7,7 @@
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
   <script>
         // Import css
         CMS.registerPreviewStyle("/assets/main.css");
@@ -36,8 +37,43 @@
                 );
             }
         });
-
         CMS.registerPreviewTemplate("projects", ProjectPreview);
+
+        // Testimonial preview
+        var TestimonialPreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+                return h('ul', {className: "testimonials"},
+                    h('li', {},
+                        h('div', {className: "quote"}, entry.getIn(['data', 'body'])),
+                        h('a', {className: "author", href: entry.getIn(['data', 'link']), target: "_blank"},
+                            h('span', {className: "author__name"}, entry.getIn(['data', 'author_name'])),
+                            h('span', {className: "author__title"}, entry.getIn(['data', 'author_title']))
+                        )
+                    )
+                );
+            }
+        });
+        CMS.registerPreviewTemplate("testimonials", TestimonialPreview);
     </script>
+    <style>
+      aside a span {
+        display: inline-flex !important;
+        justify-content: center;
+        align-items: center
+      }
+      aside a span svg {
+        display: none !important;
+      }
+      aside a span::before {
+        font-family: "Font Awesome 5 Free";
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      aside a[href="#/collections/projects"] span::before { content: "\f303"; }
+      aside a[href="#/collections/testimonials"] span::before { content: "\f10d"; }
+      aside a[href="#/collections/pages"] span::before { content: "\f15c"; }
+      aside a[href="#/collections/settings"] span::before { content: "\f013"; }
+    </style>
 </body>
 </html>

@@ -18,7 +18,7 @@ collections:
     create: true
     slug: "{{client}}"
     media_folder: '/img/projects'
-    fields: # The fields for each document, usually in front matter
+    fields:
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Titre", name: "title", widget: "string", required: false}
       - {label: "Description", name: "description", widget: "text"}
@@ -33,6 +33,19 @@ collections:
         media_library:
           config:
             multiple: false
+            
+  # Testimonials
+  - name: "testimonials"
+    label: "Témoignages"
+    label_singular: "Témoignage"
+    identifier_field: author_name
+    folder: "_testimonials"
+    create: true
+    fields:
+      - {label: "Client", name: "author_name", widget: "string"}
+      - {label: "Titre du client", name: "author_title", widget: "string"}
+      - {label: "Lien", name: "link", widget: "string", required: false}
+      - {label: "Témoignage", name: "body", widget: "markdown"}
 
 # Settings
   - label: Configuration
