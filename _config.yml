@@ -4,22 +4,21 @@ phone:              0666377940
 description:        Rédactrice indépendante
 author:             Anaïs Andos
 
-# Social Profiles
-twitter_username:   
-github_username:    
-facebook_username:  
-instagram_username:  
-linkedin_username:  anaïs-andos-49104b1bb
-
-# Formspree config
+# Third party services
 formspree_endpoint: https://formspree.io/f/mlezderd
-
 google_analytics:   G-0EKZ23M3G5
 
 # Build settings
 markdown:           kramdown
+
+# Plugins
 plugins:
   - jekyll-sitemap
+
+# Collections
+collections:
+  - projects
+  - testimonials
 
 defaults:
   -
@@ -28,6 +27,3 @@ defaults:
     values:
       background: '/img/background.jpg'
 
-collections:
-  - projects
-  - testimonials
