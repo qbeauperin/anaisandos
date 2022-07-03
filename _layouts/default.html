@@ -2,19 +2,25 @@
 
 <html>
 
-{% include head.html %}
+{% include layout/head.html %}
 
 <body class="{{ page.url | replace: '/', '' | default: 'home' }}" style="background-image: url({{ '/img/coquelicot.gif' | prepend: site.baseurl | replace: '//', '/' }})">
 
-  {% include navbar.html %}
+    {% include layout/navbar.html %}
 
-  {{ content }}
+    {% include layout/header.html %}
 
-  {% include footer.html %}
+    <div class="container">
+        <div class="row">
+            {{ content }}
+        </div>
+    </div>
 
-  {% include scripts.html %}
+    {% include layout/footer.html %}
 
-  {% include google-analytics.html %}
+    {% include scripts/scripts.html %}
+
+    {% include scripts/google-analytics.html %}
 
 </body>
 

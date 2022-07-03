@@ -33,3 +33,35 @@ collections:
         media_library:
           config:
             multiple: false
+
+# Settings
+  - label: Configuration
+    name: settings
+    files:
+      - label: General
+        name: global
+        file: "_data/settings.yml"
+        editor:
+          preview: false
+        fields:
+          - {label: "Titre du site", name: "site_title", widget: "string"}
+          - {label: "Sous-titre du site", name: "site_subheader", widget: "string"}
+          - {label: "Description du site", name: "site_description", widget: "text", hint: "Apparait dans les resultats de moteur de recherche ou quand la page d'acceuil est partagee sur les reseaux sociaux."}
+          - label: Liens
+            label_singular: Lien
+            name: links
+            widget: list
+            summary: '{{type}}'
+            collapsed: false
+            fields:
+              - label: Type
+                name: type
+                widget: select
+                options:
+                  - { label: "Email", value: "email" }
+                  - { label: "Telephone", value: "phone" }
+                  - { label: "Twitter", value: "twitter" }
+                  - { label: "Facebook", value: "facebook" }
+                  - { label: "LinkedIn", value: "linkedin" }
+                  - { label: "Instagram", value: "instagram" }
+              - { label: Lien, name: value, widget: string }

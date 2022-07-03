@@ -1,0 +1,77 @@
+<!-- Footer -->
+
+<hr>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    {% for link in site.data.settings.links %}
+                        {% if link.type == 'email' %}
+                            <li class="list-inline-item">
+                                <a href="mailto:{{ link.value | encode_email }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if link.type == 'phone' %}
+                            <li class="list-inline-item">
+                                <a href="tel:{{ link.value }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if link.type == 'twitter' %}
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/{{ link.value }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if link.type == 'facebook' %}
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/{{ link.value }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if link.type == 'linkedin' %}
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/{{ link.value }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if link.type == 'instagram' %}
+                            <li class="list-inline-item">
+                                <a href="https://instagram.com/{{ link.value }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <p class="copyright text-muted">© Photo Philippe Talbert et Claire Vinson</p>
+            </div>
+        </div>
+    </div>
+</footer>
