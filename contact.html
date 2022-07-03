@@ -1,14 +1,20 @@
 ---
 layout: page
 title: Contactez moi
-description: Pour étudier ensemble votre projet, n’hésitez pas à me contacter par mail ou téléphone. Au plaisir de vous rencontrer et de partager un bout de chemin ensemble !
+description: Pour étudier ensemble votre projet, n’hésitez pas à me contacter
+  par mail ou téléphone. Au plaisir de vous rencontrer et de partager un bout de
+  chemin ensemble !
 form: true
 permalink: /contact
+heading: Contact
+intro: Pour étudier ensemble votre projet, n’hésitez pas à me contacter par mail
+  ou téléphone. Au plaisir de vous rencontrer et de **partager un bout de chemin
+  ensemble** !
 ---
 
-<h1 class="section-heading">Contact</h1>
+<h1 class="section-heading">{{ page.heading }}</h1>
 
-<p class="raw-text">Pour étudier ensemble votre projet, n’hésitez pas à me contacter par mail ou téléphone. Au plaisir de vous rencontrer et de <strong>partager un bout de chemin ensemble</strong> !</p>
+<p class="raw-text">{{ page.intro | markdownify }}</p>
 
 <form name="sentMessage" id="contactForm" novalidate>
   <div class="control-group">
