@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "img"
+
+collections:
+  # Projects & Clients
+  - name: "projects"
+    label: "Projets"
+    label_singular: "Projet"
+    identifier_field: client
+    summary: '{{client}} – {{title}}'
+    sortable_fields: [ 'client' ]
+    folder: "_projects"
+    create: true
+    slug: "{{client}}"
+    media_folder: '/img/projects'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Client", name: "client", widget: "string"}
+      - {label: "Titre", name: "title", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Lien", name: "link", widget: "string", required: false}
+      - {label: "Bouton", name: "cta", widget: "string", default: "En lire plus", required: false}
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        default: "/img/projects/default.jpg"
+        hint: "Dimensions: 535x310, format: jpg"
+        choose_url: false
+        media_library:
+          config:
+            multiple: false

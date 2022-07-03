@@ -9,122 +9,20 @@ permalink: /projets-et-clients
 <h1 class="section-heading">Projets & clients</h1>
 
 <ul class="projects">
+    {% for project in site.projects %}
     <li class="project">
         <div class="project__image">
-            <img src="img/projects/kaizen.jpg" alt="Un tour d'Europe des solutions au changement climatique">
+            <img src="{{ project.image }}" alt="{{ project.client }}">
         </div>
         <div class="project__content">
-            <h3>Kaizen - Magazine explorateur de solutions écologiques et sociales</h3>
-            <p>Reportage</p>
+            <h3>{{ project.client }}{% if project.title %} – {{ project.title }}{% endif %}</h3>
+            <p>{{ project.description }}</p>
+            {% if project.link %}
+            <a class="btn btn-secondary project__cta" href="{{ project.link }}" target="_blank">{% if project.cta %}{{ project.cta }}{% else %}En lire plus{% endif %}</a>
+            {% endif %}
         </div>
     </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/twomorrow.jpg" alt="Un tour d'Europe des solutions au changement climatique">
-        </div>
-        <div class="project__content">
-            <h3>Twomorrow - Un tour d'Europe des solutions au changement climatique</h3>
-            <p>Relecture et correction d'un livre de 256 pages avant publication.</p>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/agence-editoriale-paragraphe.jpg" alt="Agence éditoriale Paragraphe">
-        </div>
-        <div class="project__content">
-            <h3>Paragraphe – Agence éditoriale</h3>
-            <p>Rédaction d’articles de blog et contenu de site internet.</p>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/kulturae.jpg" alt="Kulturae’ Com">
-        </div>
-        <div class="project__content">
-            <h3>Kulturae’ Com – Communication digitale et audiovisuelle dédiée à l’art et la culture</h3>
-            <p>Production de sous-titres.</p>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/fritz.jpg" alt="Fritz">
-        </div>
-        <div class="project__content">
-            <h3>Fritz – Journal pour les enfants dès 8 ans</h3>
-            <p>Rédaction d’articles, interviews et reportages pour ce quinzomadaire tourangeau.</p>
-            <a class="btn btn-secondary project__cta" href="https://drive.google.com/file/d/1JK2Xl_Z3QLf8uL3SYI7JSAV6Dks5xfFP/view?usp=sharing" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/centre-france.jpg" alt="Centre France">
-        </div>
-        <div class="project__content">
-            <h3>Centre France</h3>
-            <p>BIEN(S) CHEZ VOUS : enquêtes immobilières.<br/>GO (magazine d’orientation pour les 13-18 ans) : articles et reportages.</p>
-            <a class="btn btn-secondary project__cta" href="https://fr.calameo.com/centrefrance/read/005140227e21b2648d306" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/tmv.jpg" alt="TMV">
-        </div>
-        <div class="project__content">
-            <h3>TMV – Hebdomadaire gratuit</h3>
-            <p>Rédaction occasionnelle d’articles.</p>
-            <a class="btn btn-secondary project__cta" href="https://tmv.tmvtours.fr/wp-content/uploads/2020/10/TMV_A_20201021_TMV_001_T_Q_0-web.pdf" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/carnet-d-art.jpg" alt="Carnet d’art">
-        </div>
-        <div class="project__content">
-            <h3>Carnet d’art – Magazine</h3>
-            <p>Création libre sur thèmes imposés.</p>
-            <a class="btn btn-secondary project__cta" href="http://www.carnetdart.com/author/anais-andos/" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/loup-blanc.jpg" alt="Les films du loup blanc">
-        </div>
-        <div class="project__content">
-            <h3>Les films du loup blanc – Production cinématographique</h3>
-            <p>Création et rédaction d’un carnet de bord hebdomadaire pour permettre de suivre l’aventure du premier long-métrage des Films du Loup Blanc.</p>
-            <a class="btn btn-secondary project__cta" href="https://lemondedemesmots.wordpress.com/category/pres-de-moi-le-film-les-loups-blancs/" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/cepravoi.jpg" alt="Cepravoi">
-        </div>
-        <div class="project__content">
-            <h3>Cepravoi – Centre de pratiques vocales et instrumentales</h3>
-            <p>Rédaction d’un compte-rendu en anglais suite à la création et l’analyse d’un questionnaire de satisfaction.</p>
-            <a class="btn btn-secondary project__cta" href="https://drive.google.com/file/d/1vXL3gWOI4gksSoQv6ZOSp7fN-rQv0H3y/view" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/terres-du-son.jpg" alt="Festival Terres du Son">
-        </div>
-        <div class="project__content">
-            <h3>Festival Terres du Son</h3>
-            <p>Rédaction d’articles et interviews d’artistes pour le journal Parlons Zen.</p>
-            <a class="btn btn-secondary project__cta" href="https://drive.google.com/file/d/1hMwyj1se7HlUSQMIYsNNhfkS65WWPzn_/view" target="_blank">En lire plus</a>
-        </div>
-    </li>
-    <li class="project">
-        <div class="project__image">
-            <img src="img/projects/le-monde-de-mes-mots.jpg" alt="Le monde de mes mots">
-        </div>
-        <div class="project__content">
-            <h3>Le monde de mes mots – Blog personnel</h3>
-            <p>Ecriture d’un blog personnel depuis 2015, évoluant au fil de mes envies.</p>
-            <a class="btn btn-secondary project__cta" href="https://lemondedemesmots.wordpress.com/" target="_blank">En lire plus</a>
-        </div>
-    </li>
+    {% endfor %}
 </ul>
 
 <div class="cta">

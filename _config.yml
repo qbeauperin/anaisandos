@@ -27,3 +27,6 @@ defaults:
       path: ""
     values:
       background: '/img/background.jpg'
+
+collections:
+  - projects

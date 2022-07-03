@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+        // Import css
+        CMS.registerPreviewStyle("/assets/main.css");
+
+        // Project preview
+        var ProjectPreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+                var image = entry.getIn(['data', 'image']);
+                var bg = this.props.getAsset(image);
+                var title = entry.getIn(['data', 'title']);
+                var full_title = entry.getIn(['data', 'client']) + (title ? (' – ' + title) : '');
+                var link = entry.getIn(['data', 'link']);
+                var cta = entry.getIn(['data', 'cta']);
+                var button = link ? h('a', {className: "btn btn-secondary project__cta", href: link}, (cta ? cta : "En lire plus")) : null;
+                return h('ul', {className: "projects"},
+                    h('li', {className: "project"},
+                        h('div', {className: "project__image"},
+                            h('img', {src: bg.toString(), alt: entry.getIn(['data', 'client'])})
+                        ),
+                        h('div', {className: "project__content"},
+                            h('h3', {}, full_title),
+                            h('p', {}, entry.getIn(['data', 'description'])),
+                            button
+                        )
+                    )
+                );
+            }
+        });
+
+        CMS.registerPreviewTemplate("projects", ProjectPreview);
+    </script>
+</body>
+</html>
