@@ -1,0 +1,9 @@
+{% if page.cta %}
+    {% for cta in page.cta %}
+        {% if cta.label and cta.page %}
+            <div class="cta">
+                <a class="btn btn-primary" href="{{ cta.page | relative_url }}">{{ cta.label }}</a>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}

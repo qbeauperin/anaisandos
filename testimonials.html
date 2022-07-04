@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Ce que les gens en disent
+title: Témoignages
 description: Ces super cool gens disent des choses bien a propos de moi !
 permalink: /temoignages
+heading: Ce que les gens en disent
+cta:
+  - label: Me contacter
+    page: /contact
 ---
-
-<h1 class="section-heading">Ce que les gens en disent</h1>
 
 <ul class="testimonials">
     {% for testimonial in site.testimonials %}
@@ -18,7 +20,3 @@ permalink: /temoignages
     </li>
     {% endfor %}
 </ul>
-
-<div class="cta">
-    <a class="btn btn-primary" href="{{'/contact' | relative_url }}">Me contacter</a>
-</div>
