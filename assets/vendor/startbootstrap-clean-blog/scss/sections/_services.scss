@@ -16,7 +16,7 @@ ul.services {
         margin: 40px -200px;
     }
     
-    li {
+    li.service {
         display: block;
         margin: 10px 0;
         border: solid 1px #dedede;
@@ -25,7 +25,7 @@ ul.services {
         @media only screen and (min-width: 768px) {
             width: calc(50% - 10px);
 
-            &:last-child {
+            &:last-child:nth-child(odd) {
                 width: 100%;
             }
         }
@@ -55,21 +55,16 @@ ul.services {
             margin: 0;
         }
 
-        &:nth-child(1) > svg { fill: #7bdcb5; }
-        &:nth-child(2) > svg { fill: #ffdc7b; }
-        &:nth-child(3) > svg { fill: #a5bad5; }
-        &:nth-child(4) > svg { fill: #ff7447; }
-        &:nth-child(5) > svg { 
-            fill: #fbb9ca;
+        &--green > svg { fill: #7bdcb5; }
+        &--yellow > svg { fill: #ffdc7b; }
+        &--blue > svg { fill: #a5bad5; }
+        &--orange > svg { fill: #ff7447; }
+        &--pink > svg { fill: #fbb9ca; }
+        &--emotion > svg { 
             height: 48px;
             @media only screen and (min-width: 576px) {
                 height: 55px;
             }
         }
-        // &:nth-child(1) h3 { background-color: #fff9e9; }
-        // &:nth-child(2) h3 { background-color: #e3fff4; }
-        // &:nth-child(3) h3 { background-color: #e8f6fe; }
-        // &:nth-child(4) h3 { background-color: #f1efff; }
-        // &:nth-child(5) h3 { background-color: #fff1f5; }
     }
 }

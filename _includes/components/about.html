@@ -1,0 +1,12 @@
+{% if page.about %}
+<div class="about">
+    {% if page.about.image %}
+    <div class="about__image">
+        <img src="{{ page.about.image | relative_url }}" alt="{{ page.about.image_alt }}">
+    </div>
+    {% endif %}
+    <div class="about__content">
+        {{- page.about.content | markdownify -}}
+    </div>
+</div>
+{% endif %}

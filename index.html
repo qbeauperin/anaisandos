@@ -1,54 +1,75 @@
 ---
+heading: Ce que je peux faire pour vous
 layout: page
+title: Anaïs Andos
+description: Mon souhait ? Ecrire, écrire et écrire encore pour prendre soin de
+  demain dès aujourd’hui.
+services:
+  - title: Presse écrite
+    content: Articles, interviews et reportages… Je pars à la rencontre du monde
+      avec vous !
+    icon: press
+    colour: green
+  - title: Sous-titrage
+    content: Je transforme votre texte qui s’écoute en texte qui se lit.
+    icon: subtitles
+    colour: yellow
+  - content: Supports de communication, newsletters, dossiers de presse, réseaux
+      sociaux, articles de blog… Je suis curieuse de découvrir votre univers et,
+      tel un caméléon, de m’y fondre pour répondre au mieux à vos attentes.
+    title: Rédaction
+    icon: edits
+    colour: blue
+  - content: Pour vous, je prends mon baluchon et pars illico-presto à la recherche
+      des mots dont vous avez besoin. Je les choisis avec soin et réécris votre
+      texte pour qu’il fasse mouche auprès de vos lecteurs.
+    title: Réécriture / Correction
+    icon: correction
+    colour: orange
+  - title: Un peu d'émotions
+    content: Un slam, un poème ou même un discours ? Peu importe son nom tant qu’il
+      est beau. Expliquez-moi qui vous souhaitez faire rire ou pleurer et pour
+      quelle occasion, je me ferai un plaisir de vous aider à fabriquer
+      d’heureux souvenirs !
+    icon: emotion
+    colour: pink
+outro: J’envisage le métier de rédactrice comme une merveilleuse occasion pour
+  découvrir une multitude d’univers. J’ouvre joyeusement des fenêtres sur le
+  monde et donne le meilleur de moi-même ! Car être rédactrice, c’est aussi et
+  surtout la possibilité d’écrire pour partager, transmettre et défendre des
+  causes environnementales, sociales et culturelles, qui me tiennent
+  particulièrement à cœur.
+about:
+  content: >-
+    Mon souhait ? Ecrire, écrire et écrire encore pour prendre soin de demain
+    dès aujourd’hui.
+
+
+    Comment ? Grâce à...
+
+
+    * Une grande curiosité et un bon esprit de synthèse
+
+    * Une capacité d'adaptation au support et au public visé par le texte
+
+    * Une écriture créative et authentique, douce mais impactante
+  image: /img/anais.jpg
+  image_alt: Anaïs Andos
+cta:
+  - label: Explorer mes projets
+    page: /projets-et-clients
 ---
 
-<h2 class="section-heading">Ce que je peux faire pour vous</h2>
-
 <ul class="services">
-    <li>
-        {% include svg/press.svg %}
-        <h3>Presse écrite</h3>
-        <p>Articles, interviews et reportages… Je pars à la rencontre du monde avec&nbsp;vous&nbsp;!</p>
-    </li>
-    <li>
-        {% include svg/subtitles.svg %}
-        <h3>Sous-titrage</h3>
-        <p>Je transforme votre texte qui s’écoute en texte qui se&nbsp;lit.</p>
-    </li>
-    <li>
-        {% include svg/edits.svg %}
-        <h3>Rédaction</h3>
-        <p>Supports de communication, newsletters, dossiers de presse, réseaux sociaux, articles de blog… Je suis curieuse de découvrir votre univers et, tel un caméléon, de m’y fondre pour répondre au mieux à vos&nbsp;attentes.</p>
-    </li>
-    <li>
-        {% include svg/correction.svg %}
-        <h3>Réécriture / Correction</h3>
-        <p>Pour vous, je prends mon baluchon et pars illico-presto à la recherche des mots dont vous avez besoin. Je les choisis avec soin et réécris votre texte pour qu’il fasse mouche auprès de vos&nbsp;lecteurs.</p>
-    </li>
-    <li>
-        {% include svg/emotion.svg %}
-        <h3>Un peu d'émotions</h3>
-        <p>Un slam, un poème ou même un discours ? Peu importe son nom tant qu’il est beau. Expliquez-moi qui vous souhaitez faire rire ou pleurer et pour quelle occasion, je me ferai un plaisir de vous aider à fabriquer d’heureux&nbsp;souvenirs&nbsp;!</p>
-    </li>
+    {% for service in page.services %}
+        <li class="service service--{{ service.icon }} service--{{ service.colour }}">
+            {% include svg/{{ service.icon }}.svg %}
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.content | markdownify }}</p>
+        </li>
+    {% endfor %}
 </ul>
 
-<p class="raw-text">J’envisage le métier de rédactrice comme une merveilleuse occasion pour découvrir une multitude d’univers. J’ouvre joyeusement des fenêtres sur le monde et donne le meilleur de moi-même ! Car être rédactrice, c’est aussi et surtout la possibilité d’écrire pour partager, transmettre et défendre des causes environnementales, sociales et culturelles, qui me tiennent particulièrement à cœur.</p>
+<p class="raw-text">{{ page.outro | markdownify }}</p>
 
-<div class="about">
-    <div class="about__image">
-        <img src="{{'/img/anais.jpg' | relative_url }}" alt="Anais Andos">
-    </div>
-    <div class="about__content">
-        <p class="raw-text">Mon souhait ? Ecrire, écrire et écrire encore pour prendre soin de demain dès aujourd’hui.</p>
-        <p class="raw-text">Comment ? Grâce à...</p>
-        <ul>
-            <li>Une grande curiosité et un bon esprit de synthèse</li>
-            <li>Une capacité d'adaptation au support et au public visé par le texte</li>
-            <li>Une écriture créative et authentique, douce mais impactante</li>
-        </ul>
-    </div>
-</div>
-
-<div class="cta">
-    <a class="btn btn-primary" href="{{'/projets-et-clients' | relative_url }}">Explorer mes projets</a>
-</div>
+{% include components/about.html %}
