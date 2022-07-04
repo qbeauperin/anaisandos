@@ -3,9 +3,11 @@ title: Projets & Clients
 layout: full-width
 description: Eh regarde tout ce que j'ai fait !
 permalink: /projets-et-clients
+heading: Projets & Clients
+cta:
+  - label: Voir les témoignages
+    page: /temoignages
 ---
-
-<h1 class="section-heading">Projets & clients</h1>
 
 <ul class="projects">
     {% for project in site.projects %}
@@ -23,7 +25,3 @@ permalink: /projets-et-clients
     </li>
     {% endfor %}
 </ul>
-
-<div class="cta">
-    <a class="btn btn-primary" href="{{'/temoignages' | relative_url }}">Voir les témoignages</a>
-</div>
