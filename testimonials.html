@@ -4,17 +4,26 @@ title: Témoignages
 description: Ces super cool gens disent des choses bien a propos de moi !
 permalink: /temoignages
 heading: Ce que les gens en disent
+testimonials:
+  - Gildas Le Moigne
+  - Aurélien Germain
+  - Léo Primard et Célia Poncelin
+  - Michel de Lannoy
+  - Fabien Garou
+  - Viviana Mattei
 cta:
   - label: Me contacter
     page: /contact
 ---
 
 <ul class="testimonials">
-    {% for testimonial in site.testimonials %}
+    {% for author in page.testimonials %}
+    {% assign testimonial = site.testimonials | where: "author_name", author | first %}
+    {% unless testimonial %}{% continue %}{% endunless %}
     <li>
         <div class="quote">{{- testimonial.content -}}</div>
         <a href="{{ testimonial.link }}" class="author" target="_blank">
-            <span class="author__name">{{ testimonial.author_title }}</span>
+            <span class="author__name">{{ testimonial.author_name }}</span>
             <span class="author__title">{{ testimonial.author_title }}</span>
         </a>
     </li>

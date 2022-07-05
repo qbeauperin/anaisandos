@@ -161,6 +161,13 @@ collections:
           - {label: "Description SEO", name: "description", widget: "text"}
           - {label: "Titre de la page", name: "heading", widget: "string"}
           - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - label: "Témoignages"
+            name: "testimonials"
+            widget: "relation"
+            collection: "testimonials"
+            value_field: "author_name"
+            search_fields: ["author_name"]
+            multiple: true
           - label: "Button"
             name: "cta"
             widget: "list"
