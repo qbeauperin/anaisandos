@@ -127,6 +127,13 @@ collections:
           - {label: "Description SEO", name: "description", widget: "text"}
           - {label: "Titre de la page", name: "heading", widget: "string"}
           - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - label: "Projets"
+            name: "projects"
+            widget: "relation"
+            collection: "projects"
+            value_field: "client"
+            search_fields: ["client"]
+            multiple: true
           - label: "Button"
             name: "cta"
             widget: "list"

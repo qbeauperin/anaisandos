@@ -4,13 +4,29 @@ layout: full-width
 description: Eh regarde tout ce que j'ai fait !
 permalink: /projets-et-clients
 heading: Projets & Clients
+projects:
+  - TMV
+  - Fritz
+  - Twomorrow
+  - Festival Terres du Son
+  - Centre France
+  - Carnet d’art
+  - Paragraphe
+  - Cepravoi
+  - Corolle
+  - Kaizen
+  - Kulturae’ Com
+  - Les films du loup blanc
+  - Le monde de mes mots
 cta:
   - label: Voir les témoignages
     page: /temoignages
 ---
 
 <ul class="projects">
-    {% for project in site.projects %}
+    {% for client in page.projects %}
+    {% assign project = site.projects | where: "client", client | first %}
+    {% unless project %}{% continue %}{% endunless %}
     <li class="project">
         <div class="project__image">
             <img src="{{ project.image }}" alt="{{ project.client }}">
