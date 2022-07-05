@@ -24,15 +24,21 @@
                 var link = entry.getIn(['data', 'link']);
                 var cta = entry.getIn(['data', 'cta']);
                 var button = link ? h('a', {className: "btn btn-secondary project__cta", href: link}, (cta ? cta : "En lire plus")) : null;
-                return h('ul', {className: "projects"},
-                    h('li', {className: "project"},
-                        h('div', {className: "project__image"},
-                            h('img', {src: bg.toString(), alt: entry.getIn(['data', 'client'])})
-                        ),
-                        h('div', {className: "project__content"},
-                            h('h3', {}, full_title),
-                            h('p', {}, entry.getIn(['data', 'description'])),
-                            button
+                return h('div', { className: "container" },
+                    h('div', { className: "row" },
+                        h('div', { className: "col-lg-12 mx-auto" },
+                            h('ul', {className: "projects"},
+                                h('li', {className: "project"},
+                                    h('div', {className: "project__image"},
+                                        h('img', {src: bg.toString(), alt: entry.getIn(['data', 'client'])})
+                                    ),
+                                    h('div', {className: "project__content"},
+                                        h('h3', {}, full_title),
+                                        h('p', {}, entry.getIn(['data', 'description'])),
+                                        button
+                                    )
+                                )
+                            )
                         )
                     )
                 );
@@ -44,12 +50,18 @@
         var TestimonialPreview = createClass({
             render: function() {
                 var entry = this.props.entry;
-                return h('ul', {className: "testimonials"},
-                    h('li', {},
-                        h('div', {className: "quote"}, entry.getIn(['data', 'body'])),
-                        h('a', {className: "author", href: entry.getIn(['data', 'link']), target: "_blank"},
-                            h('span', {className: "author__name"}, entry.getIn(['data', 'author_name'])),
-                            h('span', {className: "author__title"}, entry.getIn(['data', 'author_title']))
+                return h('div', {className: "container"},
+                    h('div', {className: "row"},
+                        h('div', {className: "col-lg-8 col-md-10 mx-auto"},
+                            h('ul', {className: "testimonials"},
+                                h('li', {},
+                                    h('div', {className: "quote"}, entry.getIn(['data', 'body'])),
+                                    h('a', {className: "author", href: entry.getIn(['data', 'link']), target: "_blank"},
+                                        h('span', {className: "author__name"}, entry.getIn(['data', 'author_name'])),
+                                        h('span', {className: "author__title"}, entry.getIn(['data', 'author_title']))
+                                    )
+                                )
+                            )
                         )
                     )
                 );

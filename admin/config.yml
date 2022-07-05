@@ -16,12 +16,13 @@ collections:
     create: true
     slug: "{{client}}"
     media_folder: '/img/projects'
+    description: 'Pour editer les projets affichés sur la page /projets-et-clients, rendez vous dans les parametres de la page ("Pages" > "Projets & clients" > "Projets")'
     fields:
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Titre", name: "title", widget: "string", required: false}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Lien", name: "link", widget: "string", required: false}
-      - {label: "Bouton", name: "cta", widget: "string", default: "En lire plus", required: false}
+      - {label: "Bouton - Lien", name: "link", widget: "string", required: false, hint: "Renseigner un lien dans ce champ rajoutera un bouton."}
+      - {label: "Bouton - Label", name: "cta", widget: "string", default: "En lire plus", required: false, hint: "Si un lien est renseigné dans le champ précédent, utilisez ce champ pour changer le label."}
       - label: "Image"
         name: "image"
         widget: "image"
@@ -39,6 +40,7 @@ collections:
     identifier_field: author_name
     folder: "_testimonials"
     create: true
+    description: 'Pour editer les témoignages affichés sur la page /temoignages, rendez vous dans les parametres de la page ("Pages" > "Témoignages" > "Témoignages")'
     fields:
       - {label: "Client", name: "author_name", widget: "string"}
       - {label: "Titre du client", name: "author_title", widget: "string"}
