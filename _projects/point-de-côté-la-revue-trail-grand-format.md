@@ -1,5 +1,5 @@
 ---
-client: POINT DE CÔTÉ
+client: Point de côté
 title: La revue trail grand format
 description: Rédaction d'un article long format sur les aventures de Kilian
   Jornet dans l'Himalaya.
