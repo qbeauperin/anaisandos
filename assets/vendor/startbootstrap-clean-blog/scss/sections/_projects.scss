@@ -1,3 +1,9 @@
+body.projets-et-clients > .container {
+    @media only screen and (min-width: 1200px) {
+        max-width: 1430px;
+    }
+}
+
 ul.projects {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +32,10 @@ ul.projects {
             margin: 20px 0;
             width: calc(50% - 20px);
         }
+        @media only screen and (min-width: 1200px) {
+            margin: 20px 0;
+            width: calc(33.33% - 20px);
+        }
         
         &__image {
             position: relative;
@@ -49,7 +59,8 @@ ul.projects {
         }
         
         &__content {
-            padding: 20px;
+            position: relative;
+            padding: 20px 20px 93px;
             
             @media only screen and (min-width: 576px) {
                 flex: 1;
@@ -57,7 +68,7 @@ ul.projects {
                 border-top: none;
             }
             @media only screen and (min-width: 992px) {
-                padding: 30px;
+                padding: 30px 30px 103px;
             }
 
             h3, p {
@@ -76,8 +87,12 @@ ul.projects {
 
 
         &__cta {
-            margin-top: 20px;
-
+            position: absolute;
+            bottom: 20px;
+            @media only screen and (min-width: 992px) {
+                bottom: 30px;
+            }
+            
             &:hover, &:focus {
                 background: #0085A1;
             }
