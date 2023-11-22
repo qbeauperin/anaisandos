@@ -1,8 +1,7 @@
 ---
 client: Point de côté
 title: La revue trail grand format
-description: Rédaction d'un article long format sur les aventures de Kilian
-  Jornet dans l'Himalaya.
+description: Articles longs formats
 cta: En lire plus
-image: /img/projects/kiki.jpg
+image: /img/projects/poursite.png
 ---
