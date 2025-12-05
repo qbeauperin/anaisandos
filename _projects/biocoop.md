@@ -1,8 +1,8 @@
 ---
 client: Biocoop
 title: "Magazine Cultures Bio "
-description: Rubriques Pratique et Publi Zoom
-link: https://drive.google.com/file/d/1RqmNgGOOyU3-77dnE16c-W-BEhY5AHLK/view?usp=sharing
+description: Rubriques Pratique, publi zoom et publi rédac
+link: https://www.calameo.com/biocoop/read/007033797bcf28464a877
 cta: En lire plus
 image: /img/projects/biocoop.jpg
 ---
